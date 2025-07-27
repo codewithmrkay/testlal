@@ -15,7 +15,9 @@ export default function SmoothScrollWrapper({ children }) {
         ScrollSmoother.create({
           wrapper: '#smooth-wrapper',
           content: '#smooth-content',
-          smooth: 1.5,
+          smooth: 3,
+          normalizeScroll: true,
+          ignoreMobileResize: true,
           effects: true,
         })
       }
