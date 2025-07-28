@@ -39,11 +39,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 list-none">
           {/* Logo */}
           <Link href="/">
-            <li className="text-2xl font-medium">FortQuest</li>
+            <li className="text-2xl font-medium text-white">FortQuest</li>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center space-x-8 list-none">
+          <div className="hidden md:flex items-center space-x-8 list-none text-white">
             <Link href="/"><li><Menu text="Home" /></li></Link>
             <Link href="/explore"><li ><Menu text="Explore" /></li></Link>
             <Link href="/my-trip"><li ><Menu text="My-Trip" /></li></Link>
@@ -63,9 +63,9 @@ export default function Navbar() {
               aria-label="Toggle menu"
             >
               {menuOpen ? (
-                <XMarkIcon className="h-6 w-6" />
+                <XMarkIcon className="h-6 w-6 text-white" />
               ) : (
-                <Bars3Icon className="h-6 w-6" />
+                <Bars3Icon className="h-6 w-6 text-white" />
               )}
             </button>
           </div>

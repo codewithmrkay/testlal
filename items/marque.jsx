@@ -50,7 +50,7 @@ const Marquee = () => {
 
   return (
     <>
-      <div className="relative  tracking-[0.1em] homefont w-full overflow-hidden uppercase font-medium text-[50px] md:text-[100px] whitespace-nowrap">
+      <div className="relative text-white  tracking-[0.1em] homefont w-full overflow-hidden uppercase font-medium text-[50px] md:text-[100px] whitespace-nowrap">
         <div
           ref={containerRef}
           className="flex w-fit"
@@ -58,7 +58,7 @@ const Marquee = () => {
         >
           <div ref={contentRef} className="flex gap-8 px-4">
             {Array.from({ length: 10 }).map((_, i) => (
-              <span key={i}>{text}&nbsp;&nbsp;&nbsp;</span>
+              <span className='text-white' key={i}>{text}&nbsp;&nbsp;&nbsp;</span>
             ))}
           </div>
         </div>
