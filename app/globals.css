@@ -8,6 +8,11 @@
   src: url("/big.ttf") format("truetype");
   font-weight: 200;
 }
+@font-face {
+  font-family: "home";
+  src: url("/home.ttf") format("truetype");
+  font-weight: 200;
+}
 @import "tailwindcss";
 
 :root {
@@ -33,4 +38,7 @@ body {
   background-color: white;
   color: var(--foreground);
   font-family:big;
+}
+.homefont{
+  font-family: home;
 }

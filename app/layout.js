@@ -1,7 +1,9 @@
+""
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import SmoothScrollWrapper from "@/items/scrollsmoother";
+import Navbar from "@/items/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,17 +23,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
 
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+         <div className="fixed top-0 left-0 z-50 w-full">
+          <Navbar />
+        </div>
 
-          <SmoothScrollWrapper>
+        {/* Smooth scroll content */}
+        <SmoothScrollWrapper>
+          {children}
+        </SmoothScrollWrapper>
 
-            {children}
-          </SmoothScrollWrapper>
-
-        </body>
-      </html>
+      </body>
+    </html>
   );
 }
