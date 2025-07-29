@@ -37,7 +37,7 @@ export default function RevealText() {
                 end: `+=${scrollDuration}px`,
                 scrub: true,
                 pin: true,
-                markers: true,
+                // markers: true,
             },
         })
 
