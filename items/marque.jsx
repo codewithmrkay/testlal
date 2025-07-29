@@ -50,7 +50,7 @@ const Marquee = () => {
 
   return (
     <>
-      <div className="relative text-white  tracking-[0.1em] homefont w-full overflow-hidden uppercase font-medium text-[50px] md:text-[100px] whitespace-nowrap">
+      <div className="relative text-white  tracking-[0.01em] homefont w-full overflow-hidden uppercase font-medium text-[80px] md:text-[150px] whitespace-nowrap">
         <div
           ref={containerRef}
           className="flex w-fit"

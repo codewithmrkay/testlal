@@ -2,7 +2,9 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Boi from '@/items/marque';
+import Marque from '@/items/marque';
+import ChangeBg from '@/items/changebg';
+import RevealText from '@/items/reveltext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,19 +45,18 @@ export default function HeroSection() {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full min-h-[250vh] bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
+      className="relative w-full min-h-[100vh] bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
     >
-      <div className='absolute top-[90vh] z-10 w-full'>
-        <Boi />
-      </div>
-      {/* Pinned Section */}
+      <div className='absolute top-[80vh] md:top-[70vh] z-10 w-full'>
+        <Marque />
+      </div>     
       <div
         ref={pinRef}
-        className="relative w-full h-[100vh] flex items-center justify-center"
+        className="relative w-full flex items-center justify-center"
       >
         <div
           ref={gradientRef}
-          className="absolute inset-0 opacity-70 z-10"
+          className="absolute inset-0 opacity-70 z-5 h-[100vh]"
           style={{
             backgroundImage:
               'linear-gradient(to right, #2563eb 0%, transparent 50%, #dc2626 100%)',
@@ -65,13 +66,17 @@ export default function HeroSection() {
           ref={imgRef}
           src="/raje.png"
           alt=""
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-0 h-screen aspect-square object-cover pointer-events-none"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 h-screen aspect-square object-cover pointer-events-none"
         />
       </div>
-      {/* ✅ Wrapper exactly 100vh tall, marquee sticks to bottom of that */}
-      {/* Extra content below */}
       <div className="w-full text-white text-center py-32 text-3xl">
-        Scroll keeps going...
+        <RevealText/>
+      </div>
+      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
+      </div>
+      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
+      </div>
+      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
       </div>
     </div>
   );
