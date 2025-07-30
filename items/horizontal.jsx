@@ -57,7 +57,7 @@ const Horizontal = () => {
           <div
             key={card.id}
             data-speed={card.speed}
-            className="w-[600px] aspect-video bg-cover bg-center rounded-[38px] text-[#f6f2e8] flex items-center justify-center text-3xl font-bold  bg-amber-500"
+            className="h-[400px] w-[200px] lg:h-[300px] lg:w-[500px] bg-cover bg-center rounded-[38px] text-[#f6f2e8] flex items-center justify-center text-3xl font-bold  bg-amber-500"
             style={{ backgroundImage: `url(${card.img})` }}
           >
             {card.title}
