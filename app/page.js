@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Marque from '@/items/marque';
 import ChangeBg from '@/items/changebg';
 import RevealText from '@/items/reveltext';
+import Horizontal from '@/items/horizontal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,15 +70,17 @@ export default function HeroSection() {
           className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 h-screen aspect-square object-cover pointer-events-none"
         />
       </div>
-      <div className="w-full text-white text-center py-32 text-3xl">
+      <div className="w-full text-white text-center  text-3xl">
         <RevealText/>
       </div>
-      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
+      <div className="w-full text-white text-center text-3xl">
+        <Horizontal/>
       </div>
-      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
+      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl flex items-center justify-center">
+        dark army boi 🗿😎
       </div>
-      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
-      </div>
+      {/* <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
+      </div> */}
     </div>
   );
 }
