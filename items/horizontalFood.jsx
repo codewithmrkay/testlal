@@ -7,13 +7,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-  { id: 1, title: 'Card 1', img: '/forth2.jpg', speed: '1' },
-  { id: 2, title: 'Card 2', img: '/lohagad.jpg', speed: '1.2' },
-  { id: 3, title: 'Card 3', img: '/raigad.jpg', speed: '0.8' },
-  { id: 4, title: 'Card 4', img: '/panhala.jpg', speed: '1.1' },
+  { id: 1, title: 'Card 1', img: '/food1.jpg', speed: '1' },
+  { id: 2, title: 'Card 2', img: '/food2.jpg', speed: '1.2' },
+  { id: 3, title: 'Card 3', img: '/food3.jpg', speed: '0.8' },
+  { id: 4, title: 'Card 4', img: '/food4.jpg', speed: '1.1' },
 ];
 
-const Horizontal = () => {
+const HorizontalFood = () => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -48,7 +48,7 @@ const Horizontal = () => {
       className="relative py-[200px] overflow-hidden flex flex-col justify-center gap-10 h-screen"
     >
       <div className='homefont text-white text-5xl lg:text-8xl text-left w-fit mx-auto mt-10'>
-        <h1>Explore Forts</h1>
+        <h1>Explore Food</h1>
       </div>
       <div
         ref={containerRef}
@@ -72,4 +72,4 @@ const Horizontal = () => {
   );
 };
 
-export default Horizontal;
+export default HorizontalFood;

@@ -6,6 +6,8 @@ import Marque from '@/items/marque';
 import ChangeBg from '@/items/changebg';
 import RevealText from '@/items/reveltext';
 import Horizontal from '@/items/horizontal';
+import HorizontalFestival from '@/items/horizontalfestival';
+import HorizontalFood from '@/items/horizontalFood';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,6 +77,12 @@ export default function HeroSection() {
       </div>
       <div className="w-full text-white text-center text-3xl">
         <Horizontal/>
+      </div>
+      <div className="w-full text-white text-center text-3xl">
+        <HorizontalFestival/>
+      </div>
+      <div className="w-full text-white text-center text-3xl">
+        <HorizontalFood/>
       </div>
       <div className="w-full h-[100vh] text-white text-center py-32 text-3xl flex items-center justify-center">
         dark army boi 🗿😎
