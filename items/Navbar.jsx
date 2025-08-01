@@ -6,11 +6,15 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import HoverSwapText from './Menu'
 import Menu from './Menu'
 import { useRouter } from 'next/navigation'
+import { useAuth, UserButton } from '@clerk/nextjs'
+import GetStartedOrProfile from './getStartedProfile'
+import Leo from './leo'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const mobileMenu = useRef(null)
-  const router = useRouter()
+
   // Animate mobile menu when menuOpen changes
+ 
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (menuOpen) {
@@ -48,11 +52,9 @@ export default function Navbar() {
             <Link href="/explore"><li ><Menu text="Explore" /></li></Link>
             <Link href="/my-trip"><li ><Menu text="My-Trip" /></li></Link>
             <button >EN</button>
-            <Link href="/get-started">
-              <li className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                Get Started
-              </li>
-            </Link>
+            <div className=' flex items-center justify-center'>
+              <GetStartedOrProfile/>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -84,14 +86,10 @@ export default function Navbar() {
           <Link href="/explore"><li onClick={() => setMenuOpen(false)}><Menu text="Explore" /></li></Link>
           <Link href="/my-trip"><li onClick={() => setMenuOpen(false)}><Menu text="My Trip" /></li></Link>
           <button onClick={() => setMenuOpen(false)}>EN</button>
-          <Link href="/get-started">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="text-2xl px-4 py-2 bg-blue-600 text-white rounded"
-            >
-              Get Started
-            </button>
-          </Link>
+          <div className='flex items-center justify-center'>
+            <GetStartedOrProfile />
+            <Leo/>
+          </div>
         </nav>
       </div>
     </nav>

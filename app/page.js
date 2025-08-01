@@ -82,10 +82,16 @@ export default function HeroSection() {
         <HorizontalFestival/>
       </div>
       <div className="w-full text-white text-center text-3xl">
-        <HorizontalFood/>
+        <HorizontalFood />
       </div>
-      <div className="w-full h-[100vh] text-white text-center py-32 text-3xl flex items-center justify-center">
-        dark army boi 🗿😎
+      <div className="w-full h-[50vh] text-white text-center py-32 text-3xl flex items-center justify-center">
+        <div className='flex flex-col md:flex-row items-center justify-center'>
+          <div className='flex items-center justify-center'>
+            <h1>Made With</h1>
+            <img className='w-[50px] h-[50px]' src="/heart.gif" alt="" />
+          </div>
+          <span>&nbsp;By Dark Army😎</span>
+        </div>
       </div>
       {/* <div className="w-full h-[100vh] text-white text-center py-32 text-3xl">
       </div> */}

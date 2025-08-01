@@ -46,11 +46,11 @@ const Marquee = () => {
     }
   }, [])
 
-  const text = 'Virtual Dindi To Explore  Maharashtra   '
+  // const text = 'Virtual Dindi To Explore  Maharashtra'
 
   return (
     <>
-      <div className="relative text-white  tracking-[0.01em] homefont w-full overflow-hidden uppercase font-medium text-[80px] md:text-[150px] whitespace-nowrap">
+      <div className="relative text-white  homefont w-full overflow-hidden uppercase font-medium text-[80px] md:text-[150px] whitespace-nowrap">
         <div
           ref={containerRef}
           className="flex w-fit"
@@ -58,7 +58,7 @@ const Marquee = () => {
         >
           <div ref={contentRef} className="flex gap-8 px-4">
             {Array.from({ length: 10 }).map((_, i) => (
-              <span className='text-white' key={i}>{text}&nbsp;&nbsp;&nbsp;</span>
+              <span className='text-white' key={i}> Virtual Dindi To Explore <span className='text-orange-500'>Maharashtra</span>  &nbsp;&nbsp;&nbsp;</span>
             ))}
           </div>
         </div>
