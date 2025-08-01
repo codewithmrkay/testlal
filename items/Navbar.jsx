@@ -81,7 +81,7 @@ export default function Navbar() {
       >
         <div className="flex justify-end">
         </div>
-        <nav className="flex flex-col justify-center items-center gap-10 list-none w-full h-screen bg-gray-900 text-5xl">
+        <nav className="flex flex-col justify-center items-center gap-10 list-none w-full h-screen bg-gray-900 text-5xl text-white">
           <Link href="/"><li onClick={() => setMenuOpen(false)}><Menu text="Home" /></li></Link>
           <Link href="/explore"><li onClick={() => setMenuOpen(false)}><Menu text="Explore" /></li></Link>
           <Link href="/my-trip"><li onClick={() => setMenuOpen(false)}><Menu text="My Trip" /></li></Link>

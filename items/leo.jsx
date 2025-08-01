@@ -16,12 +16,12 @@ export default function Leo() {
 
   // 2. Prompt sign-in if needed
   if (!isSignedIn) {
-    return <div>Please sign in to see your greeting.</div>;
+    return;
   }
 
   // 3. Once signed in, show the first name
   return (
-    <div className="text-lg font-medium">
+    <div className="text-lg font-medium text-white">
       &nbsp; ras 💦 piyla ye na {user.firstName} 🍑
     </div>
   );
