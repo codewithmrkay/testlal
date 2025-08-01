@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import SmoothScrollWrapper from "@/items/scrollsmoother";
-import Navbar from "@/items/Navbar";
+import ConditionalNavbar from "@/items/conditionalNavbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <div className="fixed top-0 left-0 z-50 w-full">
-            <Navbar />
+            <ConditionalNavbar />
           </div>
           {/* Smooth scroll content */}
           <SmoothScrollWrapper>

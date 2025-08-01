@@ -86,7 +86,9 @@ export default function Navbar() {
           <Link href="/explore"><li onClick={() => setMenuOpen(false)}><Menu text="Explore" /></li></Link>
           <Link href="/my-trip"><li onClick={() => setMenuOpen(false)}><Menu text="My Trip" /></li></Link>
           <button onClick={() => setMenuOpen(false)}>EN</button>
-          <div className='flex items-center justify-center'>
+          <div 
+          onClick={() => setMenuOpen(false)}
+          className='flex items-center justify-center w-[240px] text-lg text-nowrap font-medium'>
             <GetStartedOrProfile />
             <Leo/>
           </div>

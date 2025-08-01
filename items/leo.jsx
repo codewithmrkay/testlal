@@ -22,7 +22,7 @@ export default function Leo() {
   // 3. Once signed in, show the first name
   return (
     <div className="text-lg font-medium text-white">
-      &nbsp; ras 💦 piyla ye na {user.firstName} 🍑
+      &nbsp;Welcome, {user.firstName}
     </div>
   );
 }
